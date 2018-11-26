@@ -2,12 +2,8 @@ package query;
 
 import java.math.BigDecimal;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 import util.StingUtil;
-@Getter@Setter
-@ToString
+
 public class ProductQueryObject extends QueryObject{
 	private String name;
 	private BigDecimal minSalePrice;
@@ -28,6 +24,44 @@ public class ProductQueryObject extends QueryObject{
 			super.addQuery("productName like ? or brand like ?", "%"+keyWord+"%","%"+keyWord+"%");
 		}
 		super.SetOrderBy("salePrice", OrderBy.ASC);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public BigDecimal getMinSalePrice() {
+		return minSalePrice;
+	}
+
+	public void setMinSalePrice(BigDecimal minSalePrice) {
+		this.minSalePrice = minSalePrice;
+	}
+
+	public BigDecimal getMaxSalePrice() {
+		return maxSalePrice;
+	}
+
+	public void setMaxSalePrice(BigDecimal maxSalePrice) {
+		this.maxSalePrice = maxSalePrice;
+	}
+
+	public String getKeyWord() {
+		return keyWord;
+	}
+
+	public void setKeyWord(String keyWord) {
+		this.keyWord = keyWord;
+	}
+
+	@Override
+	public String toString() {
+		return "ProductQueryObject [name=" + name + ", minSalePrice=" + minSalePrice + ", maxSalePrice=" + maxSalePrice
+				+ ", keyWord=" + keyWord + "]";
 	}
 
 	
