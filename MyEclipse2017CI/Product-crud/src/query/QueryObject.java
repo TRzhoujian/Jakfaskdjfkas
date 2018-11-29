@@ -5,9 +5,6 @@ import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-
-import com.alibaba.druid.sql.ast.statement.SQLWithSubqueryClause.Entry;
 
 public class QueryObject implements IQuery{
 	private Integer currentPage =1;

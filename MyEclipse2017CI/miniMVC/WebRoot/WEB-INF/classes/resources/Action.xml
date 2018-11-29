@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+	<action name="m1" class="miniMVC.MyAction" method="execute">
+		<result name="list" type="dispatcher">/WebRoot/index.jsp</result>
+		<result name="edit" type="redirect">/WebRoot/MyJsp.jsp</result>
+		<result name="add" type="redirect">/WebRoot/MyJsp1.jsp</result>
+	</action>
+	<action name="m2" class="miniMVC.MyAction2" method="execute"/>
+	<action name="m3" class="miniMVC.MyAction3" method="aaaaa"/>
+</actions>

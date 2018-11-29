@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import dao.IProductDAO;
 import dao.impl.ProductDAOImpl;
 import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 import page.PageResult;
 import query.ProductQueryObject;
 import util.StingUtil;

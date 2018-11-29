@@ -1,9 +1,6 @@
 package page;
 
 import java.util.List;
-
-import lombok.Getter;
-import lombok.ToString;
 @SuppressWarnings("all")
 
 public class PageResult {

@@ -1,6 +1,5 @@
 package dao.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import dao.IProductDAO;
