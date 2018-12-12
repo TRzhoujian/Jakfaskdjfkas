@@ -25,10 +25,30 @@
 
 <!-- START SNIPPET: xworkSample -->
 <struts>
-	<constant name="struts.action.extension" value="action1,do,,aa"></constant>
- 	 <constant name="struts.configuration.xml.reload" value="ture"></constant> 
-	 <include file="resources/struts.xml"/> 
 
+	 <!-- <include file="resources/Struts3.xml"/>  -->
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="m1" class="FristStruts.MyAction" method="FristJava">
+            <result name="b1" >/WEB-INF/showcase.jsp</result>
+        </action>
+    </package>
+    
+     
+    
+    <package name="MyPkg" extends="default" namespace="/">
+		<action name="m3" class="FristStruts.MyAction" method="FristJava">
+            <result name="b1" type="chain">
+            	<param name="namespace">/adm</param>
+            	<param name="actionName">m2</param>
+            </result>
+        </action>
+    </package>
+    
+    <package name="aaa" extends="struts-default" namespace="/adm">
+		<action name="m2">
+            <result >/index.jsp</result>
+        </action>
+    </package>
 </struts>
 
 <!-- END SNIPPET: xworkSample -->
