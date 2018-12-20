@@ -25,9 +25,10 @@
 
 <!-- START SNIPPET: xworkSample -->
 <struts>
+	<constant name="struts.devMode" value="true"></constant> 
   	 <constant name="struts.action.extension" value="action1,do,,aa"></constant> 
  	 <constant name="struts.configuration.xml.reload" value="ture"></constant>  
-     <include file="resources/Struts3.xml"/>
+     <include file="resources/Student.xml"/>
 </struts>
 
 <!-- END SNIPPET: xworkSample -->
